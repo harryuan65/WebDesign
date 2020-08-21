@@ -24,6 +24,7 @@
   flex-direction:row;
   justify-content: space-between;
   align-items: center;
+  user-select: none;
 }
 .bar .buttons-wrap{
   position: absolute;
