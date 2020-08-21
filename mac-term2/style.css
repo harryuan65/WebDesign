@@ -154,6 +154,7 @@ input.typezone{
   font-size: 14px;
   color: #ccc;
   margin-left: -1px;
+  width: 600px;
 }
 input.typezone:focus{
    outline-width: 0;
