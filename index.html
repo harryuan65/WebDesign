@@ -1,31 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>harry@Harrysde-MacBook-Pro: ~</title>
     <link rel="stylesheet" href="style.css">
     <script src="main.js"></script>
 </head>
+
 <body>
     <div class="window">
         <div class="bar">
-          <div class="buttons-wrap">
-            <div class="button red"></div>
-            <div class="button yellow"></div>
-            <div class="button green"></div>
-          </div>
-          <div class="title">harry@Harrysde-MacBook-Pro: ~</div>
-          <span class="right-sym">&#x2325;&#x2318;1</span>
+            <div class="buttons-wrap">
+                <div class="button red"></div>
+                <div class="button yellow"></div>
+                <div class="button green"></div>
+            </div>
+            <div class="title" id="title"></div>
+            <span class="right-sym">&#x2325;&#x2318;1</span>
         </div>
         <div class="body">
-          <div class="records" id="records">drwxrwxr-x@   4 harry  staff      128  8 17 23:15 Creative Cloud Files<br>
-      drwx------@  62 harry  staff     1984  8 21 10:07 Desktop</div>
+            <div class="records" id="records">
+                drwxrwxr-x@ 4 harry staff 128 8 17 23:15 Creative Cloud Files<br>
+                drwx------@ 62 harry staff 1984 8 21 10:07 Desktop<br>
+            </div>
             <div class="typezone-wrap">
-        <label for="typezone">harry@Harrysde-MacBook-Pro ~</label>
-        <input type="text" class="typezone" value="">
+                <label for="typezone" id="typezone-prefix"></label>
+                <input type="text" class="typezone" id="typezone" value="">
+            </div>
         </div>
-        </div>
-      </div>
+    </div>
 </body>
+
 </html>

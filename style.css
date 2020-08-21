@@ -145,9 +145,10 @@
   input.typezone{
     position: relative;
     background-color: #3b3b3b;
-    height: 14px;
+    height: 15px;
     border: none;
     caret-color: white;
+    font-size: 14px;
     color: #ccc;
   }
   input.typezone:focus{
