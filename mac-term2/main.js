@@ -47,20 +47,25 @@ function dragElement(elmnt) {
 //end drag functions
 
 document.addEventListener("DOMContentLoaded", ()=>{
-    dragElement(document.getElementById("window"));
-    let date = new Date();
-    document.getElementById('records').innerHTML=`Last login: ${dowNames[date.getDay()].slice(0,3)} ${monthNames[date.getMonth()].slice(0,3)} ${date.getDate()} ${date.toLocaleTimeString()} on ttys002<br>`;
-    setTimeout(()=>Init(), Math.random()*1500 + 400);
+    let w = document.getElementById("window");
+    if(w){
+      dragElement(w);
+      let date = new Date();
+      document.getElementById('records').innerHTML=`Last login: ${dowNames[date.getDay()].slice(0,3)} ${monthNames[date.getMonth()].slice(0,3)} ${date.getDate()} ${date.toLocaleTimeString()} on ttys002<br>`;
+      setTimeout(()=>Init(), Math.random()*1000 + 500);
+    }
 })
 
 function Init(){
-    document.getElementById('title').innerText = screenTitle;
-    document.getElementById('typezone-prefix').innerText = screenTitle;
-    document.getElementById('typezone').addEventListener('keypress', (e)=>{
-        if(e.key === 'Enter' || e.keyCode === 13){
-          addHistory(e.target.value);
-        }
-    })
+    if(document.getElementById("window")){
+      document.getElementById('title').innerText = screenTitle;
+      document.getElementById('typezone-prefix').innerText = screenTitle;
+      document.getElementById('typezone').addEventListener('keypress', (e)=>{
+          if(e.key === 'Enter' || e.keyCode === 13){
+            addHistory(e.target.value);
+          }
+      })
+    }
 }
 function addHistory(text){
     let newLine = screenTitle + " " + text + "<br>";

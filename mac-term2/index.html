@@ -13,9 +13,9 @@
     <div class="window" id="window">
         <div class="bar" id="bar">
             <div class="buttons-wrap">
-                <div class="button red"></div>
-                <div class="button yellow"></div>
-                <div class="button green"></div>
+                <div class="button red" id="btn-close" onclick="event.target.parentElement.parentElement.parentElement.remove()"></div>
+                <div class="button yellow" id="btn-minimize"></div>
+                <div class="button green" id="btn-toggle__full__scrn"></div>
             </div>
             <div class="title" id="title"></div>
             <span class="right-sym">&#x2325;&#x2318;1</span>
