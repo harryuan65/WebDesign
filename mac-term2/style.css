@@ -159,3 +159,17 @@ input.typezone{
 input.typezone:focus{
    outline-width: 0;
 }
+
+@media only screen and (max-width: 500px){
+  #window{
+    max-width: 500px;
+    min-width: 300px;
+  }
+  input.typezone{
+    max-width: 200px;
+    min-width: 30px;
+  }
+  .title{
+    display: none;
+  }
+}
