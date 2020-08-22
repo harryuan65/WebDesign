@@ -4,6 +4,47 @@ const monthNames = ["January", "February", "March", "April", "May", "June",
         "July", "August", "September", "October", "November", "December"];
 const dowNames =["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 
+
+// Object.entries(file).map((pair,i)=>(pair[1]))
+var files = [
+  {
+    permission: "drwxr-xr-x",
+    links: 5,
+    user: 'harry',
+    group: 'staff',
+    fileSize: '160',
+    lastModifiedAt: '8 22 12:37',
+    name: '.',
+  },
+  {
+    permission: "drwxr-xr-x",
+    links: 6,
+    user: 'harry',
+    group: 'staff',
+    fileSize: '192',
+    lastModifiedAt: '8 22 12:37',
+    name: '..',
+  },
+  {
+    permission: "-rw-r--r--",
+    links: 1,
+    user: 'harry',
+    group: 'staff',
+    fileSize: '3007',
+    lastModifiedAt: '8 22 13:03',
+    name: 'about.md',
+  },
+  {
+    permission: "-rw-r--r--",
+    links: 1,
+    user: 'harry',
+    group: 'staff',
+    fileSize: '376',
+    lastModifiedAt: '8 21 10:53',
+    name: 'help.txt',
+  },
+]
+
 // drag functions
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
@@ -113,26 +154,14 @@ function ls(opts=[]){
   let lines = [];
   let inline = false;
   if (opts.includes("l")){
-    lines =  [
-      "drwxr-xr-x 5 harry staff 160 8 22 12:37 .",
-      "drwxr-xr-x 6 harry staff 192 8 22 12:37 ..",
-      "-rw-r--r-- 1 harry staff 1150 8 21 18:50 index.html",
-      "-rw-r--r-- 1 harry staff 2581 8 22 12:37 main.js",
-      "-rw-r--r-- 1 harry staff 3007 8 21 20:51 style.css",
-    ];
     let lengthMapping = [10, 1, 5, 5, 6, 1, 2, 4, 0]
-    lines = lines.map(
-      e=>{
-        return e.split(' ').map((part,i)=>{return part.padStart(lengthMapping[i], '^').padEnd(2, '^');}).join('&nbsp;').replace(/\^/g,"&nbsp;")
-      }
-    );
-    console.log(lines);
+     // file obj -> map values only -> join to single line
+    lines = files.map(e=>{return Object.entries(e).map((pair, i)=>{return pair[1].toString().padStart(lengthMapping[i], '^').replace(/\^/g,'&nbsp;')}).join('&nbsp;')})
+
     inline = false;
   }
   else{
-    lines = [
-      ".", "..", "index.html", "main.js", "style.css"
-    ];
+    lines = files.map(e=>{return e.name})
     inline = true
   }
   if (!opts.includes("a")){
@@ -140,10 +169,3 @@ function ls(opts=[]){
   }
   return inline ? lines.join("&nbsp;&nbsp;") : lines.join("<br>") ;
 }
-
-
-
-
-
-
-
