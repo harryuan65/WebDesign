@@ -59,21 +59,21 @@
 .button.red::before{
   content: '\2715';
   color: #990800;
-  font-size: 12px;
+  font-size: 14px;
   height: 100%;
   position: relative;
-  left: 3px;
-  top: -4px;
+  left: 4px;
+  top: -1px;
   display: none;
 }
 .button.yellow::before{
   content: '\2212';
   color: #990800;
-  font-size: 12px;
+  font-size: 14px;
   height: 100%;
   position: relative;
   left: 3px;
-  top: -4px;
+  top: -1px;
   display: none;
 }
 .button.green::before{
