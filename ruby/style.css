@@ -1,0 +1,56 @@
+@font-face{
+  font-family: 'Noto Sans Regular';
+  src: url("./fonts/NotoSans-Regular.ttf") format('truetype')
+}
+#name{
+  font-family: 'Noto Sans Regular';
+}
+html, body{
+  background-color: #3B3B3B;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#ruby{
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  transition: .3s ease;
+  /* transform: scale(1.5); */
+}
+#ruby path{
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: draw 2s ease-in-out forwards;
+}
+@keyframes draw{
+  from{
+    stroke-dashoffset: 1;
+    opacity: 0.2;
+  }
+  to{
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}
+#name{
+  display: inline-block;
+  animation: expand 2s 2s forwards;
+  width: 0px;
+  overflow: hidden;
+  white-space: nowrap;
+  color: #eee;
+  font-size: 38px;
+  font-style: oblique;
+}
+@keyframes expand{
+  from{
+    width: 0px;
+  }
+  to{
+    width: 300px;
+  }
+}
