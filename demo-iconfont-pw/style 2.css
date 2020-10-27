@@ -1,0 +1,90 @@
+* {
+   color: black;
+   font-size: 30px;
+}
+@font-face {
+  font-family: 'fontello';
+  src: url('./asterisk/fontello.eot?75968131');
+  src: url('./asterisk/fontello.eot?75968131#iefix') format('embedded-opentype'),
+       url('./asterisk/fontello.woff2?75968131') format('woff2'),
+       url('./asterisk/fontello.woff?75968131') format('woff'),
+       url('./asterisk/fontello.ttf?75968131') format('truetype'),
+       url('./asterisk/fontello.svg?75968131#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+input[type="password"] {
+    font-family: 'fontello';
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+
+    /* For safety - reset parent styles, that can break glyph codes*/
+    font-variant: normal;
+    text-transform: none;
+
+    /* Font smoothing. That was taken from TWBS */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* Uncomment for 3D effect */
+    /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+
+    /* add spacing to better separate each image */
+    /* letter-spacing: 2px; */
+}
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+    font-family: "fontello";
+    font-style: normal;
+    font-weight: normal;
+    speak: never;
+
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    /* opacity: .8; */
+
+    /* For safety - reset parent styles, that can break glyph codes*/
+    font-variant: normal;
+    text-transform: none;
+
+    /* fix buttons height, for twitter bootstrap */
+    line-height: 1em;
+
+    /* Animation center compensation - margins should be symmetric */
+    /* remove if not needed */
+    margin-left: .2em;
+
+    /* you can be more comfortable with increased icons size */
+    /* font-size: 120%; */
+
+    /* Font smoothing. That was taken from TWBS */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Uncomment for 3D effect */
+    /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+  }
+
+.icon-asterisk:before { content: '\2022'; } /* '•' */
+input[type="password"] {
+	font-family: 'fontello' !important;
+	font-style: normal;
+	font-weight: normal;
+	speak: none;
+
+	/* For safety - reset parent styles, that can break glyph codes*/
+	font-variant: normal;
+	text-transform: none;
+
+	/* Font smoothing. That was taken from TWBS */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	/* Uncomment for 3D effect */
+	/* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+
+	/* add spacing to better separate each image */
+	letter-spacing: 2px;
+}
