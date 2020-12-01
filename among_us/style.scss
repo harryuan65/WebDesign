@@ -23,12 +23,12 @@ html, body{
 .player-wrap{
   position: absolute;
   left: -100%;
-  animation: eject 20s forwards;
+  animation: eject 15s forwards;
 }
 
 @keyframes eject{
   from{left: -100%;}
-  to{left: 200%;transform: rotate(2400deg);}
+  to{left: 200%;transform: rotate(960deg);}
 }
 
 #narration{
