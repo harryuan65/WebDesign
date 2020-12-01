@@ -6,6 +6,18 @@ html, body{
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  color: #eee;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#wrap-input{
+  position: absolute;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: repeat(2, 40px);
+  width: 300px;
+  &.fade-out{
+    animation: fade-out .5s forwards;
+  }
 }
 .space-wrapper{
   background-image: url("https://us.123rf.com/450wm/natalia0103/natalia01031508/natalia0103150800030/44239332-diepe-ruimte-achtergrond-met-sterren-.jpg");
@@ -18,12 +30,11 @@ html, body{
 }
 #player{
   width: 60px;
-  animation: rotate 2s infinite;
 }
-.player-wrap{
+#player-wrap{
   position: absolute;
-  left: -100%;
-  animation: eject 20s forwards;
+  left: -5%;
+  animation: eject 20s forwards paused;
 }
 
 @keyframes eject{
@@ -35,7 +46,10 @@ html, body{
   overflow: hidden;
   white-space: nowrap;
   color: #eee;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
   border-right: 1px solid black;
   font-size: 18px;
 };
+
+@keyframes fade-out{
+  to{opacity: 0;}
+}

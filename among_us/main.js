@@ -1,6 +1,6 @@
 var i = [0]; //used to check which char is printing now
 var txt = 'Jamie was An imposter';
-var speed = 10;
+var speed = 20;
 
 function typing(isLast=false){
   var p = document.getElementById("narration");
