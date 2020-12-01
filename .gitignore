@@ -1,1 +1,3 @@
-mumi
+test
+*.sass-cache
+*.css.map
