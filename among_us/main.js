@@ -1,5 +1,5 @@
 var i = [0]; //used to check which char is printing now
-var txt = 'Jamie was Un imposter';
+var txt = 'Jamie was An imposter';
 var speed = 10;
 
 function typing(isLast=false){
