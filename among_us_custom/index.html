@@ -6,11 +6,20 @@
   <title>Among Us - Made by harryuan65</title>
   <link rel="stylesheet" href="./style.css">
   <script type="text/javascript" src="./main.js"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FJ25X8T54H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-FJ25X8T54H');
+  </script>
 </head>
 <body>
   <div id="wrap-input">
     <input id="input-name" type="text" placeholder="Enter name" oninput="setDisplayName(event)">
-    <button class="btn" onclick="startAnimation()">Start</button>
+    <button class="btn" onclick="startAnimation();alert('F');gtag('event', 'start_animation', {'event_category' : 'click',  'event_label' : 'start_btn'});">Start</button>
     <div class="wrap-name"><span class="label-name">Name: </span><span id="name"></span></div>
   </div>
   <div class="space-wrapper">
