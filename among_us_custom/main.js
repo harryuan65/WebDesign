@@ -1,22 +1,20 @@
 var i = 0; //used to check which char is printing now
 var name = "";
 var txt = ' was An imposter';
-var speed = 20;
+var speed = 25;
 
-function setName(){
+function setDisplayName(event){
+  document.getElementById('name').innerText = event.target.value;
   name = document.getElementById('input-name').value;
-  txt = name + txt;
-  document.getElementById('name').innerText = name;
-  console.log(txt);
 }
 function startAnimation(){
   if(name===""){
-    alert("Please set name");
+    alert("Please set a name!");
   }else{
+    txt = name + txt;
     document.getElementById('wrap-input').classList.add("fade-out");
     document.getElementById('player-wrap').style.animationPlayState = "running";
     setTimeout(typing, 6000);
-    this.disabled = true;
   }
 }
 function typing(isLast=false){
@@ -33,7 +31,3 @@ function typing(isLast=false){
     if(isLast) p.style.borderRight = 'none';
   }
 }
-
-// window.onload = () => {
-//   setTimeout(typing, 6000);
-// }

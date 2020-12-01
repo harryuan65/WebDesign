@@ -12,12 +12,26 @@ html, body{
 #wrap-input{
   position: absolute;
   display: grid;
-  grid-template-columns: 60% 40%;
-  grid-template-rows: repeat(2, 40px);
-  width: 300px;
+  grid-template-columns: 70% 30%;
+  grid-template-rows: repeat(2, 60px);
+  width: 350px;
   &.fade-out{
     animation: fade-out .5s forwards;
   }
+}
+#input-name{
+  padding: 8px;
+  font-size: 20px;
+}
+.btn{
+  font-size: 17px;
+}
+.wrap-name{
+  display: flex;
+  align-items: flex-end;
+}
+.label-name, #name{
+  font-size: 20px;
 }
 .space-wrapper{
   background-image: url("https://us.123rf.com/450wm/natalia0103/natalia01031508/natalia0103150800030/44239332-diepe-ruimte-achtergrond-met-sterren-.jpg");
