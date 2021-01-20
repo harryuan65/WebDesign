@@ -1,0 +1,75 @@
+html, body{
+  height:100%;
+  width: 100%;
+  margin: 0;
+  background-color: black;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#container{
+  position: relative;
+  /* height: 100%;
+  width: 100%; */
+}
+
+#body{
+  position: absolute;
+  z-index: 100;
+}
+#body:hover + #wow, #body:hover ~ #left, #body:hover ~ #right{
+  transition: opacity .2s ease-in;
+  opacity: 1;
+}
+#wow{
+  transition: opacity .2s ease-in;
+  position: absolute;
+  top: -75px;
+  opacity: 0;
+}
+
+#left{
+  transition: opacity .2s ease-in;
+  position: absolute;
+  right: -36px;
+  top: -40px;
+  transform-origin: bottom right;
+  animation: wave-left 1s ease-in-out infinite;
+  opacity: 0;
+}
+
+#right{
+  transition: opacity .2s ease-in;
+  position: absolute;
+  left: 147px;
+  top: -44px;
+  transform-origin: bottom left;
+  animation: wave-right 1s .1s ease-in-out infinite;
+  opacity: 0;
+}
+
+@keyframes wave-left{
+  0% {
+    transform: rotate(0deg);
+  }
+  55%{
+    transform: rotate(-20deg);
+  }
+  100%{
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes wave-right{
+  0% {
+    transform: rotate(0deg);
+  }
+  55%{
+    transform: rotate(20deg);
+  }
+  100%{
+    transform: rotate(0deg);
+  }
+}
